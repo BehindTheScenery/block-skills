@@ -7,7 +7,8 @@ loom {
 }
 
 dependencies {
-    modImplementation "net.impleri:player-skills-${rootProject.minecraft_version}:${rootProject.playerskills_version}"
+//    modImplementation "net.impleri:player-skills-${rootProject.minecraft_version}:${rootProject.playerskills_version}"
+    modImplementation files("../deps/player-skills-1.19.2-1.12.1-SNAPSHOT.jar")
     modImplementation "net.impleri:fluid-skills-${rootProject.minecraft_version}:${rootProject.fluidskills_version}"
     modImplementation "net.fabricmc:fabric-loader:${rootProject.fabric_loader_version}"
     modApi "dev.architectury:architectury:${rootProject.architectury_version}"

@@ -24,7 +24,8 @@ dependencies {
     modApi "net.fabricmc.fabric-api:fabric-api:${rootProject.fabric_api_version}"
     modApi "dev.architectury:architectury-fabric:${rootProject.architectury_version}"
     modApi "dev.latvian.mods:kubejs-fabric:${rootProject.kubejs_version}"
-    modImplementation "net.impleri:player-skills-${rootProject.minecraft_version}-fabric:${rootProject.playerskills_version}"
+//    modImplementation "net.impleri:player-skills-${rootProject.minecraft_version}-fabric:${rootProject.playerskills_version}"
+    modImplementation files("../deps/player-skills-1.19.2-1.12.1-SNAPSHOT.jar")
     modImplementation "net.impleri:fluid-skills-${rootProject.minecraft_version}-fabric:${rootProject.fluidskills_version}"
 
     common(project(path: ":common", configuration: "namedElements")) { transitive false }

@@ -104,6 +104,7 @@ allprojects {
             }
         }
         maven { url "https://maven.blamejared.com" }
+        maven { url 'https://jitpack.io' }
 
         maven {
             url = "https://maven.saps.dev/minecraft"

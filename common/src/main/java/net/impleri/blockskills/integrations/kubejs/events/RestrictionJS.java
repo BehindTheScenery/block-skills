@@ -1,6 +1,6 @@
 package net.impleri.blockskills.integrations.kubejs.events;
 
-import dev.latvian.mods.kubejs.RegistryObjectBuilderTypes;
+import dev.latvian.mods.kubejs.registry.RegistryInfo;
 import dev.latvian.mods.rhino.util.HideFromJS;
 import net.impleri.blockskills.BlockHelper;
 import net.impleri.blockskills.BlockSkills;
@@ -17,7 +17,7 @@ import net.minecraft.world.level.block.Blocks;
 public class RestrictionJS extends Restriction {
     private static final ResourceKey<Registry<Restriction>> key = ResourceKey.createRegistryKey(SkillResourceLocation.of("block_restriction_builders_registry"));
 
-    public static final RegistryObjectBuilderTypes<Restriction> registry = RegistryObjectBuilderTypes.add(key, Restriction.class);
+    public static final RegistryInfo registry = RegistryInfo.of(key).type(Restriction.class);
 
     public RestrictionJS(Block block, Builder builder) {
         super(
@@ -119,7 +119,7 @@ public class RestrictionJS extends Restriction {
 
         @HideFromJS
         @Override
-        public RegistryObjectBuilderTypes<Restriction> getRegistryType() {
+        public RegistryInfo getRegistryType() {
             return registry;
         }
 
